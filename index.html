@@ -433,8 +433,9 @@ ul.marks li b{color:var(--ink);font-weight:600}
     <p class="eyebrow">existing methods</p>
     <h2 class="huge">Present synthetic-data methods<br>are low on coverage.</h2>
     <div class="rowlist">
-      <div class="r"><b>Self-Instruct</b> — more task variety &middot; <b>Evol-Instruct</b> — harder examples &middot; <b>Persona-driven</b> — more perspectives</div>
-      <div class="r"><b>Self-play</b> — improve against yourself &middot; <b>Adversarial</b> — find failures &middot; <b>Distillation</b> — copy a teacher</div>
+      <div class="r"><b>Self-Instruct</b> — task variety &middot; <span style="color:var(--loop)">circles its seeds</span> &nbsp;&nbsp; <b>Evol-Instruct</b> — harder examples &middot; <span style="color:var(--loop)">harder, not wider</span></div>
+      <div class="r"><b>Persona-driven</b> — more perspectives &middot; <span style="color:var(--loop)">revisits same regions</span> &nbsp;&nbsp; <b>Self-play</b> — improves vs itself &middot; <span style="color:var(--loop)">explores nothing new</span></div>
+      <div class="r"><b>Adversarial</b> — finds failures &middot; <span style="color:var(--loop)">chases weaknesses only</span> &nbsp;&nbsp; <b>Distillation</b> — copies a teacher &middot; <span style="color:var(--loop)">capped by the teacher</span></div>
     </div>
   </div>
 </section>
