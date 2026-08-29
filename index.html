@@ -359,37 +359,16 @@ ul.marks li b{color:var(--ink);font-weight:600}
 
 
 
-<section class="slide" id="origin">
-  <div class="inner" style="max-width:1280px">
-    <p class="eyebrow" style="text-align:center">origin &middot; Q2 2026</p>
-    <h2 style="text-align:center">We tried the frontier model + harness path first.</h2>
-    <div class="tri">
-      <div class="cell">
-        <p class="tag">Experiment 1 &middot; the judge</p>
-        <h3>Venture evaluation agent</h3>
-        <p>Models a business deeply — returns <b>its viable shapes</b>, not a verdict.</p>
-      </div>
-      <div class="cell">
-        <p class="tag">Experiment 2 &middot; the planner</p>
-        <h3>Scenario generation agent</h3>
-        <p>Generates <b>many distinct scenarios on purpose</b>.</p>
-      </div>
-      <div class="cell">
-        <p class="tag">Experiment 3 &middot; the runner</p>
-        <h3>Autonomous run agent</h3>
-        <p>Runs plans <b>unattended for days</b>.</p>
-      </div>
-    </div>
-  
-    <p class="floodcap" style="text-align:center;margin-top:14px">three working systems came out of it</p>
-  </div>
-</section>
+
 
 <section class="slide mega" id="ceiling">
   <div class="inner">
     <p class="eyebrow">the ceiling</p>
     <h2 class="huge">Autonomy is not expertise.</h2>
-    <p class="sub">The systems kept working, but the work ran shallow: <b>important considerations missed,
+    <p class="sub">We tried the harness path ourselves — frontier models + our own agent
+    architectures. <b>Billions of tokens. Runs of 40 &rarr; 72 &rarr; 720+ hours, unattended.</b>
+    The systems kept working.</p>
+    <p class="sub" style="margin-top:16px">But the work ran shallow: <b>important considerations missed,
     scenarios not planned, assumptions and resources forgotten, past learning lost.</b></p>
     <p class="sub" style="margin-top:16px">Harnesses and agents are the execution layer;
     <b>the missing piece is the intelligence inside them.</b></p>
@@ -438,25 +417,14 @@ ul.marks li b{color:var(--ink);font-weight:600}
 <section class="slide mega" id="synth">
   <div class="inner">
     <p class="eyebrow">existing methods</p>
-    <h2 class="huge" style="font-size:var(--fs-heading)">Present synthetic-data methods are low on coverage.</h2>
-    <p class="floodcap" style="margin-top:12px">grow outward from a sample —</p>
-    <div class="rowlist" style="margin-top:6px">
-      <div class="r" style="padding:5px 0;font-size:var(--fs-caption)"><b>Self-Instruct &middot; Evol-Instruct &middot; Self-play &middot; Distillation</b> — more, harder, self-copying &middot; <span style="color:var(--loop)">still sample-bound</span></div>
-      <div class="r" style="padding:5px 0;font-size:var(--fs-caption)"><b>Persona Hub</b> — a billion viewpoints &middot; <span style="color:var(--loop)">changes who asks, not what exists</span></div>
-      <div class="r" style="padding:5px 0;font-size:var(--fs-caption)"><b>Verbalized Sampling</b> — surfaces suppressed answers &middot; <span style="color:var(--loop)">recovers its own mass, never exceeds it</span></div>
-      <div class="r" style="padding:5px 0;font-size:var(--fs-caption)"><b>DCE</b> — remembers and rejects repeats &middot; <span style="color:var(--loop)">knows what it drew, not what it missed</span></div>
-      <div class="r" style="padding:5px 0;font-size:var(--fs-caption)"><b>AIDE</b> — expands from seed attributes &middot; <span style="color:var(--loop)">every step pulled back toward the seed</span></div>
-      <div class="r" style="padding:5px 0;font-size:var(--fs-caption)"><b>FAC Synthesis</b> — coverage in feature space &middot; <span style="color:var(--loop)">limited to what the model already represents</span></div>
+    <h2 class="huge">Present synthetic-data methods<br>are low on coverage.</h2>
+    <div class="rowlist">
+      <div class="r"><b>Grow from a sample</b> — Self-Instruct &middot; Evol-Instruct &middot; personas &middot; self-play &middot; distillation &middot; <span style="color:var(--loop)">bounded by where they start</span></div>
+      <div class="r"><b>Verify against a world</b> — RST &middot; AgentMercury &middot; graph synthesis &middot; <span style="color:var(--loop)">works for code — business decisions have no sandbox</span></div>
     </div>
-    <p class="floodcap" style="margin-top:10px">the ones that verify — verification is free when you have a world to run; business decisions don't —</p>
-    <div class="rowlist" style="margin-top:6px">
-      <div class="r" style="padding:5px 0;font-size:var(--fs-caption)"><b>RST</b> — harder tasks in rounds &middot; <span style="color:var(--loop)">needs a sandbox to accept each one</span></div>
-      <div class="r" style="padding:5px 0;font-size:var(--fs-caption)"><b>AgentMercury</b> — writes its own verifier &middot; <span style="color:var(--loop)">a fixed grid of industries and countries</span></div>
-      <div class="r" style="padding:5px 0;font-size:var(--fs-caption)"><b>Induction Labs</b> — rewards novelty directly &middot; <span style="color:var(--loop)">maximizes strangeness, not real-world frequency</span></div>
-      <div class="r" style="padding:5px 0;font-size:var(--fs-caption)"><b>Graph synthesis</b> — <span style="color:var(--loop)">runs only where an ontology already exists</span></div>
-    </div>
-    <p class="sub" style="margin-top:12px">Every current method grows outward from a sample.
+    <p class="sub">Every current method grows outward from a sample.
     <b>None of them starts from the space.</b></p>
+    <p class="floodcap" style="margin-top:14px">full method map in appendix</p>
   </div>
 </section>
 
@@ -845,6 +813,55 @@ ul.marks li b{color:var(--ink);font-weight:600}
   </div>
 </section>
 
+<section class="slide mega" id="synth-full">
+  <div class="inner">
+    <p class="eyebrow">Appendix &middot; synthetic-data methods — the full map</p>
+    <h2 class="huge" style="font-size:var(--fs-heading)">Present synthetic-data methods are low on coverage.</h2>
+    <p class="floodcap" style="margin-top:12px">grow outward from a sample —</p>
+    <div class="rowlist" style="margin-top:6px">
+      <div class="r" style="padding:5px 0;font-size:var(--fs-caption)"><b>Self-Instruct &middot; Evol-Instruct &middot; Self-play &middot; Distillation</b> — more, harder, self-copying &middot; <span style="color:var(--loop)">still sample-bound</span></div>
+      <div class="r" style="padding:5px 0;font-size:var(--fs-caption)"><b>Persona Hub</b> — a billion viewpoints &middot; <span style="color:var(--loop)">changes who asks, not what exists</span></div>
+      <div class="r" style="padding:5px 0;font-size:var(--fs-caption)"><b>Verbalized Sampling</b> — surfaces suppressed answers &middot; <span style="color:var(--loop)">recovers its own mass, never exceeds it</span></div>
+      <div class="r" style="padding:5px 0;font-size:var(--fs-caption)"><b>DCE</b> — remembers and rejects repeats &middot; <span style="color:var(--loop)">knows what it drew, not what it missed</span></div>
+      <div class="r" style="padding:5px 0;font-size:var(--fs-caption)"><b>AIDE</b> — expands from seed attributes &middot; <span style="color:var(--loop)">every step pulled back toward the seed</span></div>
+      <div class="r" style="padding:5px 0;font-size:var(--fs-caption)"><b>FAC Synthesis</b> — coverage in feature space &middot; <span style="color:var(--loop)">limited to what the model already represents</span></div>
+    </div>
+    <p class="floodcap" style="margin-top:10px">the ones that verify — verification is free when you have a world to run; business decisions don't —</p>
+    <div class="rowlist" style="margin-top:6px">
+      <div class="r" style="padding:5px 0;font-size:var(--fs-caption)"><b>RST</b> — harder tasks in rounds &middot; <span style="color:var(--loop)">needs a sandbox to accept each one</span></div>
+      <div class="r" style="padding:5px 0;font-size:var(--fs-caption)"><b>AgentMercury</b> — writes its own verifier &middot; <span style="color:var(--loop)">a fixed grid of industries and countries</span></div>
+      <div class="r" style="padding:5px 0;font-size:var(--fs-caption)"><b>Induction Labs</b> — rewards novelty directly &middot; <span style="color:var(--loop)">maximizes strangeness, not real-world frequency</span></div>
+      <div class="r" style="padding:5px 0;font-size:var(--fs-caption)"><b>Graph synthesis</b> — <span style="color:var(--loop)">runs only where an ontology already exists</span></div>
+    </div>
+    <p class="sub" style="margin-top:12px">Every current method grows outward from a sample.
+    <b>None of them starts from the space.</b></p>
+  </div>
+</section>
+
+<section class="slide" id="origin-detail">
+  <div class="inner">
+    <p class="eyebrow">Appendix &middot; the harness experiments &middot; Q2 2026</p>
+    <h2>The three systems we built on the way.</h2>
+    <div class="tri">
+      <div class="cell">
+        <p class="tag">Experiment 1 &middot; the judge</p>
+        <h3>Venture evaluation agent</h3>
+        <p>Models a business deeply — returns <b>its viable shapes</b>, not a verdict.</p>
+      </div>
+      <div class="cell">
+        <p class="tag">Experiment 2 &middot; the planner</p>
+        <h3>Scenario generation agent</h3>
+        <p>Generates <b>many distinct scenarios on purpose</b>.</p>
+      </div>
+      <div class="cell">
+        <p class="tag">Experiment 3 &middot; the runner</p>
+        <h3>Autonomous run agent</h3>
+        <p>Runs plans <b>unattended for days</b>.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section class="slide" id="filling">
   <div class="inner" style="max-width:1280px;position:relative">
     <p class="eyebrow" style="text-align:center">Appendix &middot; measured &middot; aug 2026</p>
@@ -906,7 +923,7 @@ ul.marks li b{color:var(--ink);font-weight:600}
   <div class="row">
     <span class="keys">&larr; &rarr; / swipe &middot; A all slides &middot; F fullscreen &middot; &#8997;+draw copies context</span>
     <span class="right">
-      <span id="counter">01 / 27</span>
+      <span id="counter">01 / 28</span>
       <button id="themebtn" aria-label="Toggle light or dark theme">&#x25D0;</button>
       <button id="fsbtn" aria-label="Toggle fullscreen">&#x26F6;</button>
       <svg width="26" height="26" viewBox="0 0 26 26">
