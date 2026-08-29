@@ -420,7 +420,7 @@ ul.marks li b{color:var(--ink);font-weight:600}
     <h2 class="huge">Present synthetic-data methods<br>are low on coverage.</h2>
     <div class="rowlist">
       <div class="r"><b>Grow from a sample</b> — Self-Instruct &middot; Evol-Instruct &middot; personas &middot; self-play &middot; distillation &middot; <span style="color:var(--loop)">bounded by where they start</span></div>
-      <div class="r"><b>Verify against a world</b> — RST &middot; AgentMercury &middot; graph synthesis &middot; <span style="color:var(--loop)">works for code — business decisions have no sandbox</span></div>
+      <div class="r"><b>Domains handed an executable environment</b> — code, physics, software gyms &middot; <span style="color:var(--loop)">business decisions aren't — their experience must be constructed as data</span></div>
     </div>
     <p class="sub">Recent research has begun space-first generation for bounded tasks —
     broader coverage improved model capability.
@@ -573,7 +573,7 @@ ul.marks li b{color:var(--ink);font-weight:600}
     <p class="body" style="max-width:48em;margin-left:auto;margin-right:auto;text-align:center">In VLM systems shipped worldwide, we trained
     with <b>focused synthetic data</b>: models improved drastically in the target
     direction — <b>without catastrophic forgetting</b>, the classic failure of
-    narrow fine-tuning.</p>
+    narrow fine-tuning. <b>The same causal claim, proven in an easier domain.</b></p>
     <figure class="fig" style="margin:22px auto 0;width:fit-content;max-width:100%">
       <video src="vlm-reel-slide.mp4" autoplay muted loop playsinline
              style="display:block;margin:0 auto;width:auto;max-width:100%;max-height:60vh;border-radius:10px;border:1px solid var(--line);background:#F4F1EA"></video>
@@ -609,7 +609,7 @@ ul.marks li b{color:var(--ink);font-weight:600}
         <h3>Head of Sales — mid-size SaaS company</h3>
         <p>Human, probabilistic, high-frequency — pipeline, pricing, territory, hiring,
         cadence. <b>Deals close, or they don't.</b> Runs a hybrid org of AI agents and humans.
-        <b>Access: decision teams at BarRaiser and a mid-size AI customer-service company.</b></p>
+        <b>Build &amp; debug: BarRaiser — our own company. Independent evaluation: a mid-size AI customer-service company.</b></p>
       </div>
       <div class="cell">
         <p class="tag">Experiment 2 &middot; engineering programs</p>
@@ -619,7 +619,8 @@ ul.marks li b{color:var(--ink);font-weight:600}
         manufacturer.</b></p>
       </div>
     </div>
-    <p class="floodcap" style="margin-top:16px">validation plan &middot; commercial products follow the proof</p>
+    <p class="floodcap" style="margin-top:16px">how judged: frozen point-in-time context &middot; 100&ndash;300 historical decisions &middot; baselines: frontier, RAG/agent, size-matched open model &middot; blind independent judges &middot; scored on facts, constraints, risks, assumptions, staged experiments</p>
+    <p class="floodcap" style="margin-top:6px">validation plan &middot; commercial products follow the proof</p>
   </div>
 </section>
 
@@ -641,7 +642,7 @@ ul.marks li b{color:var(--ink);font-weight:600}
       <div class="r"><b>Judgment didn't catch up</b> — the binding constraint moved to specialist decisions.</div>
       <div class="r"><b>Now we can specialize them</b> — without the huge pretraining cost.</div>
       <div class="r"><b>Training data became AI's most contested layer</b> — the internet is spent; labs pay $1B+/yr for generated signal.</div>
-      <div class="r"><b>The pattern already works</b> — P-1 AI: general model + generated engineering experience &rarr; engineering specialist. $23M seed, then $50M Series A within a year.</div>
+      <div class="r"><b>The pattern already works</b> — P-1 AI: general model + generated engineering experience &rarr; engineering specialist. $23M seed, then $50M Series A within a year. <span style="color:var(--loop)">Engineering came with an executable environment — business decisions don't.</span></div>
     </div>
   </div>
 </section>
@@ -696,7 +697,7 @@ ul.marks li b{color:var(--ink);font-weight:600}
           <span style="display:inline-block;margin-right:22px"><span style="display:inline-block;width:10px;height:10px;border-radius:2px;margin-right:8px;background:var(--loop);vertical-align:middle"></span><b style="color:var(--ink)">$6.5M</b> data generation</span><span style="display:inline-block;margin-right:22px"><span style="display:inline-block;width:10px;height:10px;border-radius:2px;margin-right:8px;background:var(--loop-soft);border:1px solid var(--loop);vertical-align:middle"></span><b style="color:var(--ink)">$7M</b> training</span><span style="display:inline-block;margin-right:22px"><span style="display:inline-block;width:10px;height:10px;border-radius:2px;margin-right:8px;background:var(--dag);vertical-align:middle"></span><b style="color:var(--ink)">$0.5M</b> benchmark &amp; evaluation</span><span style="display:inline-block"><span style="display:inline-block;width:10px;height:10px;border-radius:2px;margin-right:8px;background:var(--dag-dim);vertical-align:middle"></span><b style="color:var(--ink)">$1M</b> ops &amp; contingency</span>
         </div>
     </figure>
-    <p class="floodcap" style="margin-top:14px">adaptive gates — cheap ablations before full-scale runs &middot; headcount plan in appendix</p>
+    <p class="floodcap" style="margin-top:14px">spend runs as evidence gates: small corpus &rarr; ablation &rarr; scale only what passed &rarr; matched-size training &rarr; kill what doesn't &middot; headcount plan in appendix</p>
   </div>
 </section>
 
@@ -884,7 +885,7 @@ ul.marks li b{color:var(--ink);font-weight:600}
     <p class="eyebrow">Appendix &middot; the two experiments — methodology</p>
     <h2>How each experiment is judged.</h2>
     <div class="rowlist">
-      <div class="r"><b>Sales</b> — 100&ndash;300 historical enterprise opportunities &middot; frozen point-in-time context &middot; frontier vs RAG/agent vs Truna specialist &middot; blind evaluation by experienced sales leaders &middot; historical outcomes where available &middot; judged also on running a hybrid org (agents + humans) and staged experimentation &middot; access: BarRaiser + a mid-size AI customer-service company.</div>
+      <div class="r"><b>Sales</b> — 100&ndash;300 historical enterprise opportunities &middot; frozen point-in-time context &middot; frontier vs RAG/agent vs Truna specialist &middot; blind evaluation by experienced sales leaders &middot; historical outcomes where available &middot; judged also on running a hybrid org (agents + humans) and staged experimentation &middot; BarRaiser used to build and debug the loop — evaluation by judges independent of it.</div>
       <div class="r"><b>Engineering</b> — 50&ndash;200 historical decision points per project &middot; schedule, dependency, procurement and resource constraints &middot; blind evaluation by project directors &middot; novel constraint combinations to test generalization &middot; access: NTPC + a large pharma manufacturer.</div>
     </div>
     <p class="floodcap" style="margin-top:14px">validation plan — not yet run &middot; designed to be able to disprove the thesis</p>
