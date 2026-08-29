@@ -422,8 +422,9 @@ ul.marks li b{color:var(--ink);font-weight:600}
       <div class="r"><b>Grow from a sample</b> — Self-Instruct &middot; Evol-Instruct &middot; personas &middot; self-play &middot; distillation &middot; <span style="color:var(--loop)">bounded by where they start</span></div>
       <div class="r"><b>Verify against a world</b> — RST &middot; AgentMercury &middot; graph synthesis &middot; <span style="color:var(--loop)">works for code — business decisions have no sandbox</span></div>
     </div>
-    <p class="sub">Every current method grows outward from a sample.
-    <b>None of them starts from the space.</b></p>
+    <p class="sub">Recent research has begun space-first generation for bounded tasks —
+    broader coverage improved model capability (TreeSynth, NeurIPS 2025 Spotlight).
+    <b>Business decisions are harder: the space is unknown, open-ended and always changing.</b></p>
     <p class="floodcap" style="margin-top:14px">full method map in appendix</p>
   </div>
 </section>
@@ -432,9 +433,11 @@ ul.marks li b{color:var(--ink);font-weight:600}
   <div class="inner split"><div class="mtext">
     <p class="eyebrow">our solution</p>
     <h2 class="huge">The data machine<br>that doesn't halt.</h2>
-    <p class="sub">(Writes the missing data — and stops only when measured coverage saturates.)</p>
+    <p class="sub">Business decisions don't come with a map.
+    <b>Our machine discovers the space as it generates it</b> — and stops only when
+    measured coverage saturates.</p>
     <p class="mathstrip" style="margin-top:20px">M<sub>open-model</sub> + D<sub>domain</sub> &nbsp;&rarr;&nbsp; <span class="hot">M<sub>role</sub></span></p>
-    <p class="floodcap" style="margin-top:8px">D<sub>domain</sub> = data made by the data machine on the complete decision space of the domain</p>
+    <p class="floodcap" style="margin-top:8px">D<sub>domain</sub> = synthetic experience covering the role's decision space</p>
     <p class="mathstrip" style="margin-top:14px">M<sub>role</sub> + D*<sub>company</sub> &nbsp;&rarr;&nbsp; <span class="hot">M<sub>role@company</sub></span></p>
     <p class="floodcap" style="margin-top:8px">D*<sub>company</sub> = the company's own history, expanded to the complete decision space of its environment</p>
     
@@ -489,8 +492,7 @@ ul.marks li b{color:var(--ink);font-weight:600}
 <section class="slide mega" id="seeding">
   <div class="inner split"><div class="mtext">
     <h2 class="huge">Seed the machine with anything.<br>It never stops.</h2>
-    <p class="sub">Independent revisits from many directions — <b>agreement amplifies
-    signal; disagreement flags error.</b> Data grows in a clean manner.</p>
+    <p class="sub">The data stays clean as it grows.</p>
   
     </div>
     <div class="mfig" style="max-width:760px;width:100%"><figure class="fig">
