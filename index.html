@@ -392,7 +392,7 @@ ul.marks li b{color:var(--ink);font-weight:600}
 </section>
 
 <section class="slide mega" id="needs">
-  <div class="inner split"><div class="mtext">
+  <div class="inner">
     <p class="eyebrow">what it takes</p>
     <h2 class="huge">We need a specialist model<br>trained on:</h2>
     <div class="rowlist">
@@ -400,10 +400,18 @@ ul.marks li b{color:var(--ink);font-weight:600}
       <div class="r"><b>Depth</b> — every scenario followed through to its outcomes.</div>
       <div class="r"><b>Breadth</b> — the whole decision space covered, including what has never happened yet.</div>
     </div>
-    <p class="body" style="max-width:34em;margin-top:18px">So trained, the specialist <b>tests the cause before it commits</b> —
-    business history records correlation; the model runs the <b>cheapest, most informative experiment</b>
-    and re-decides on the result.</p>
-    <p class="floodcap">the decision loop, at right — a capability the specialists are trained for &middot; scored in both seed experiments</p>
+  </div>
+</section>
+
+<section class="slide mega" id="causal">
+  <div class="inner split"><div class="mtext">
+    <p class="eyebrow">the specialist &middot; the decision loop</p>
+    <h2>The specialist tests the cause before it commits.</h2>
+    <p class="body" style="max-width:34em">Business history records correlation — it rarely proves <b>what caused what</b>.
+    Our specialists are trained to treat their own uncertainty as a signal: find the causal claim the
+    decision leans on, look ahead across possible tests, and run the <b>cheapest one with the highest
+    expected information gain</b> — then re-decide on the result. Big bets become sequences of cheap, causal tests.</p>
+    <p class="floodcap">a capability the specialists are trained for &middot; scored in both seed experiments</p>
   </div>
     <div class="mfig" style="max-width:560px;width:100%"><figure class="fig"><svg viewBox="0 0 560 424" role="img" aria-label="A loop: competing readings of a decision lead to the smallest causal test, its observed outcome establishes cause, and the model re-decides — repeating until the decision is sharp enough to commit">
           <defs>
@@ -1056,7 +1064,7 @@ ul.marks li b{color:var(--ink);font-weight:600}
   <div class="row">
     <span class="keys">&larr; &rarr; / swipe &middot; A all slides &middot; F fullscreen &middot; &#8997;+draw copies context</span>
     <span class="right">
-      <span id="counter">01 / 30</span>
+      <span id="counter">01 / 31</span>
       <button id="themebtn" aria-label="Toggle light or dark theme">&#x25D0;</button>
       <button id="fsbtn" aria-label="Toggle fullscreen">&#x26F6;</button>
       <svg width="26" height="26" viewBox="0 0 26 26">
