@@ -375,6 +375,44 @@ ul.marks li b{color:var(--ink);font-weight:600}
   </div>
 </section>
 
+<section class="slide mega" id="causal">
+  <div class="inner split"><div class="mtext">
+    <p class="eyebrow">the decision loop</p>
+    <h2>Test the cause before you commit.</h2>
+    <p class="body" style="max-width:34em">Business history records what happened together — it rarely proves <b>what caused what</b>.
+    Our specialists are trained to treat their own uncertainty as a signal: find the causal claim the
+    decision leans on, look ahead across possible tests, and run the <b>cheapest one with the highest
+    expected information gain</b> — then re-decide on the result. Big bets become sequences of cheap, causal tests.</p>
+    <p class="floodcap">a capability the specialists are trained for &middot; scored in both seed experiments</p>
+  </div>
+    <div class="mfig" style="max-width:560px;width:100%"><figure class="fig"><svg viewBox="0 0 560 424" role="img" aria-label="A loop: competing readings of a decision lead to the smallest causal test, its observed outcome establishes cause, and the model re-decides — repeating until the decision is sharp enough to commit">
+          <defs>
+            <marker id="arc-d" viewBox="0 0 8 8" refX="6" refY="4" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L8 4L0 8z" fill="var(--dag)"/></marker>
+            <marker id="arc-o" viewBox="0 0 8 8" refX="6" refY="4" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L8 4L0 8z" fill="var(--loop)"/></marker>
+          </defs>
+          <circle cx="56" cy="56" r="7" fill="var(--dag)"/>
+          <text x="78" y="52" font-family="var(--mono)" font-size="13.5" font-weight="600" fill="var(--ink)">competing readings</text>
+          <text x="78" y="70" font-family="var(--mono)" font-size="12" fill="var(--muted)">the decision leans on an untested causal claim</text>
+          <line x1="56" y1="72" x2="56" y2="122" stroke="var(--dag)" stroke-width="1.6" marker-end="url(#arc-d)"/>
+          <circle cx="56" cy="146" r="7" fill="var(--loop)"/>
+          <text x="78" y="142" font-family="var(--mono)" font-size="13.5" font-weight="600" fill="var(--ink)">cheapest, most informative test</text>
+          <text x="78" y="160" font-family="var(--mono)" font-size="12" fill="var(--muted)">the model looks ahead across candidate experiments —</text>
+          <text x="78" y="176" font-family="var(--mono)" font-size="12" fill="var(--muted)">lowest cost, highest expected information gain</text>
+          <line x1="56" y1="178" x2="56" y2="228" stroke="var(--dag)" stroke-width="1.6" marker-end="url(#arc-d)"/>
+          <circle cx="56" cy="252" r="7" fill="var(--dag)"/>
+          <text x="78" y="248" font-family="var(--mono)" font-size="13.5" font-weight="600" fill="var(--ink)">observed outcome</text>
+          <text x="78" y="266" font-family="var(--mono)" font-size="12" fill="var(--muted)">cause established, cheaply — the model re-decides</text>
+          <line x1="56" y1="268" x2="56" y2="308" stroke="var(--dag)" stroke-width="1.3" stroke-dasharray="4 4" marker-end="url(#arc-d)"/>
+          <circle cx="56" cy="330" r="7" fill="none" stroke="var(--loop)" stroke-width="1.6" stroke-dasharray="3 3"/>
+          <text x="78" y="326" font-family="var(--mono)" font-size="13.5" font-weight="600" fill="var(--ink)">fits no reading? expand the hypothesis set</text>
+          <text x="78" y="344" font-family="var(--mono)" font-size="12" fill="var(--muted)">new readings enter the loop — how blind spots get caught</text>
+          <path d="M42 328 C 10 270, 10 96, 42 58" fill="none" stroke="var(--loop)" stroke-width="1.8" marker-end="url(#arc-o)"/>
+          <text x="280" y="390" text-anchor="middle" font-family="var(--mono)" font-size="12" fill="var(--faint)">the loop repeats until the decision is sharp</text>
+          <text x="280" y="408" text-anchor="middle" font-family="var(--mono)" font-size="12" fill="var(--faint)">enough to commit — or the deadline arrives</text>
+        </svg></figure></div>
+  </div>
+</section>
+
 <section class="slide mega" id="team">
   <div class="inner">
     <p class="eyebrow">team</p>
@@ -892,40 +930,6 @@ ul.marks li b{color:var(--ink);font-weight:600}
   </div>
 </section>
 
-<section class="slide mega" id="causal">
-  <div class="inner split"><div class="mtext">
-    <p class="eyebrow">Appendix &middot; staged experiments</p>
-    <h2>Test the cause before you commit.</h2>
-    <p class="body" style="max-width:34em">Business history records what happened together — it rarely proves <b>what caused what</b>.
-    Our specialists are trained to treat their own uncertainty as a signal: find the causal claim the
-    decision leans on, look ahead across possible tests, and run the <b>cheapest one with the highest
-    expected information gain</b> — then re-decide on the result. Big bets become sequences of cheap, causal tests.</p>
-    <p class="floodcap">a capability the specialists are trained for &middot; scored in both seed experiments</p>
-  </div>
-    <div class="mfig" style="max-width:560px;width:100%"><figure class="fig"><svg viewBox="0 0 560 344" role="img" aria-label="A loop: competing readings of a decision lead to the smallest causal test, its observed outcome establishes cause, and the model re-decides — repeating until the decision is sharp enough to commit">
-          <defs>
-            <marker id="arc-d" viewBox="0 0 8 8" refX="6" refY="4" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L8 4L0 8z" fill="var(--dag)"/></marker>
-            <marker id="arc-o" viewBox="0 0 8 8" refX="6" refY="4" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L8 4L0 8z" fill="var(--loop)"/></marker>
-          </defs>
-          <circle cx="56" cy="56" r="7" fill="var(--dag)"/>
-          <text x="78" y="52" font-family="var(--mono)" font-size="13.5" font-weight="600" fill="var(--ink)">competing readings</text>
-          <text x="78" y="70" font-family="var(--mono)" font-size="12" fill="var(--muted)">the decision leans on an untested causal claim</text>
-          <line x1="56" y1="72" x2="56" y2="122" stroke="var(--dag)" stroke-width="1.6" marker-end="url(#arc-d)"/>
-          <circle cx="56" cy="146" r="7" fill="var(--loop)"/>
-          <text x="78" y="142" font-family="var(--mono)" font-size="13.5" font-weight="600" fill="var(--ink)">cheapest, most informative test</text>
-          <text x="78" y="160" font-family="var(--mono)" font-size="12" fill="var(--muted)">the model looks ahead across candidate experiments —</text>
-          <text x="78" y="176" font-family="var(--mono)" font-size="12" fill="var(--muted)">lowest cost, highest expected information gain</text>
-          <line x1="56" y1="178" x2="56" y2="228" stroke="var(--dag)" stroke-width="1.6" marker-end="url(#arc-d)"/>
-          <circle cx="56" cy="252" r="7" fill="var(--dag)"/>
-          <text x="78" y="248" font-family="var(--mono)" font-size="13.5" font-weight="600" fill="var(--ink)">observed outcome</text>
-          <text x="78" y="266" font-family="var(--mono)" font-size="12" fill="var(--muted)">cause established, cheaply — the model re-decides</text>
-          <path d="M42 250 C 14 212, 14 94, 42 58" fill="none" stroke="var(--loop)" stroke-width="1.8" marker-end="url(#arc-o)"/>
-          <text x="280" y="312" text-anchor="middle" font-family="var(--mono)" font-size="12" fill="var(--faint)">the loop repeats until the decision is sharp</text>
-          <text x="280" y="330" text-anchor="middle" font-family="var(--mono)" font-size="12" fill="var(--faint)">enough to commit — or the deadline arrives</text>
-        </svg></figure></div>
-  </div>
-</section>
-
 <section class="slide" id="filling">
   <div class="inner" style="max-width:1280px;position:relative">
     <p class="eyebrow" style="text-align:center">Appendix &middot; measured &middot; aug 2026</p>
@@ -948,24 +952,27 @@ ul.marks li b{color:var(--ink);font-weight:600}
     <p class="eyebrow">Appendix &middot; case study &middot; aug 2026</p>
     <h2>A sliver of our data already shifts what a model considers.</h2>
     <p class="body" style="max-width:34em">One real decision — <b>should a deep-tech fund invest in a ramjet-propulsion
-    startup?</b> Same question to the same frontier model, three ways. Each run's top 300 considerations were
-    pooled, clustered, and scored on decision impact (0&ndash;100). <b>~1,000 of our generated sequences, given
-    only as context,</b> <b style="color:var(--loop)">surfaced 18 of the top-50 exclusives — including the study's single
-    highest-impact insight (94/100).</b></p>
-    <p class="floodcap">one decision &middot; sequences used only as context — nothing trained yet &middot; the seed round trains on millions</p>
+    startup?</b> Three runs of the same frontier model: <b>unbounded agentic research</b> — internet,
+    many turns, no budget cap; the same plus an OpenAI Deep Research memo; the same plus
+    <b>~1,000 of our generated sequences.</b> Top 300 considerations per run — pooled, clustered,
+    blind-scored on decision impact (0&ndash;100). <b style="color:var(--loop)">Ours: 92 exclusive high-impact
+    considerations vs 42 and 33, at higher average impact (73 vs 61) — including the study's
+    top insight (94/100).</b></p>
+    <p class="floodcap">n = 1 decision, no recorded outcome &middot; impact blind-scored &middot; sequences as context only — nothing trained yet &middot; the seed round trains on millions</p>
   </div>
-    <div class="mfig" style="max-width:640px;width:100%"><figure class="fig"><svg viewBox="0 0 640 690" role="img" aria-label="Top: horizontal bars of exclusive high-impact considerations in the top 50 — model alone 3, OpenAI Deep Research memo 4, our generated sequences as context 18. Bottom: the decision space drawn as a dashed circle — a gray shared core every run finds in the middle, a few memo-edge points a bit further out, and orange points from our data spread to the edges, with the single 94-out-of-100 insight at the rim">
-          <text x="20" y="28" font-family="var(--mono)" font-size="15" fill="var(--muted)">exclusive considerations in the top 50</text>
-          <text x="20" y="74" font-family="var(--mono)" font-size="14" fill="var(--dag)">model alone</text>
-          <rect x="20" y="84" width="93" height="36" fill="var(--dag)" opacity=".55"/>
-          <text x="125" y="110" font-family="var(--mono)" font-size="18" fill="var(--dag)">3</text>
-          <text x="20" y="156" font-family="var(--mono)" font-size="14" fill="var(--dag)">+ OpenAI Deep Research memo</text>
-          <rect x="20" y="166" width="124" height="36" fill="var(--dag)" opacity=".55"/>
-          <text x="156" y="192" font-family="var(--mono)" font-size="18" fill="var(--dag)">4</text>
-          <text x="20" y="238" font-family="var(--mono)" font-size="14" fill="var(--loop)">+ ~1,000 of our generated sequences — only as context</text>
+    <div class="mfig" style="max-width:640px;width:100%"><figure class="fig"><svg viewBox="0 0 640 690" role="img" aria-label="Top: horizontal bars of exclusive high-impact considerations scoring 70 or more — unbounded agentic research 42, the same plus a deep-research memo 33, the same plus our generated sequences 92. Bottom: the decision space drawn as a dashed circle — a gray shared core every run finds in the middle, a few memo-edge points a bit further out, and orange points from our data spread to the edges, with the single 94-out-of-100 insight at the rim">
+          <text x="20" y="28" font-family="var(--mono)" font-size="15" fill="var(--muted)">exclusive high-impact considerations (impact &ge; 70)</text>
+          <text x="20" y="74" font-family="var(--mono)" font-size="14" fill="var(--dag)">unbounded agentic research — internet, many turns, no cap</text>
+          <rect x="20" y="84" width="254" height="36" fill="var(--dag)" opacity=".55"/>
+          <text x="286" y="110" font-family="var(--mono)" font-size="18" fill="var(--dag)">42</text>
+          <text x="20" y="156" font-family="var(--mono)" font-size="14" fill="var(--dag)">same run + OpenAI Deep Research memo</text>
+          <rect x="20" y="166" width="199" height="36" fill="var(--dag)" opacity=".55"/>
+          <text x="231" y="192" font-family="var(--mono)" font-size="18" fill="var(--dag)">33</text>
+          <text x="20" y="238" font-family="var(--mono)" font-size="14" fill="var(--loop)">same run + ~1,000 of our generated sequences — as context</text>
           <rect x="20" y="248" width="556" height="36" fill="var(--loop)"/>
-          <text x="588" y="276" font-family="var(--mono)" font-size="22" font-weight="600" fill="var(--loop)">18</text>
-          <text x="320" y="320" text-anchor="middle" font-family="var(--mono)" font-size="13" fill="var(--faint)">same model, same question &middot; only the context changes</text>
+          <text x="586" y="276" font-family="var(--mono)" font-size="22" font-weight="600" fill="var(--loop)">92</text>
+          <text x="320" y="308" text-anchor="middle" font-family="var(--mono)" font-size="13" fill="var(--faint)">same frontier model, same question — only what it holds changes</text>
+          <text x="320" y="328" text-anchor="middle" font-family="var(--mono)" font-size="13" fill="var(--muted)">the memo added nothing — the bottleneck is structure, not effort</text>
           <text x="20" y="420" font-family="var(--mono)" font-size="15" fill="var(--muted)">where the high-impact considerations live</text>
           <circle cx="185" cy="555" r="110" fill="none" stroke="var(--faint)" stroke-width="1.3" stroke-dasharray="3 4"/>
           <g fill="var(--dag)" opacity=".45">
@@ -1034,6 +1041,14 @@ ul.marks li b{color:var(--ink);font-weight:600}
       <div class="qa">
         <p class="q">"Where's revenue?"</p>
         <p class="a">This seed buys the proof; <b>first paid deployments land with design partners around the next round.</b></p>
+      </div>
+      <div class="qa">
+        <p class="q">"Isn't the case study just one decision?"</p>
+        <p class="a">Yes — n = 1, blind-scored, no outcome ground truth. It shows our data <b>relocates a model's attention</b>; next: 20&ndash;30 decisions, independently graded — <b>before any training claim.</b></p>
+      </div>
+      <div class="qa">
+        <p class="q">"Is experiment-selection your invention?"</p>
+        <p class="a">No — information-driven experiment design is established research. Ours is the <b>business decision space:</b> the mapped corpus and the specialists trained on it.</p>
       </div>
       <div class="qa">
         <p class="q">"Why this team?"</p>
