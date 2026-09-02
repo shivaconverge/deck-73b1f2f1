@@ -898,11 +898,11 @@ ul.marks li b{color:var(--ink);font-weight:600}
     <h2>Test the cause before you commit.</h2>
     <p class="body" style="max-width:34em">Business history records what happened together — it rarely proves <b>what caused what</b>.
     Our specialists are trained to treat their own uncertainty as a signal: find the causal claim the
-    decision leans on, run the <b>smallest experiment that isolates it</b>, and re-decide on the result.
-    Big bets become sequences of cheap, causal tests.</p>
+    decision leans on, look ahead across possible tests, and run the <b>cheapest one with the highest
+    expected information gain</b> — then re-decide on the result. Big bets become sequences of cheap, causal tests.</p>
     <p class="floodcap">a capability the specialists are trained for &middot; scored in both seed experiments</p>
   </div>
-    <div class="mfig" style="max-width:560px;width:100%"><figure class="fig"><svg viewBox="0 0 560 330" role="img" aria-label="A loop: competing readings of a decision lead to the smallest causal test, its observed outcome establishes cause, and the model re-decides — repeating until the decision is sharp enough to commit">
+    <div class="mfig" style="max-width:560px;width:100%"><figure class="fig"><svg viewBox="0 0 560 344" role="img" aria-label="A loop: competing readings of a decision lead to the smallest causal test, its observed outcome establishes cause, and the model re-decides — repeating until the decision is sharp enough to commit">
           <defs>
             <marker id="arc-d" viewBox="0 0 8 8" refX="6" refY="4" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L8 4L0 8z" fill="var(--dag)"/></marker>
             <marker id="arc-o" viewBox="0 0 8 8" refX="6" refY="4" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L8 4L0 8z" fill="var(--loop)"/></marker>
@@ -912,15 +912,16 @@ ul.marks li b{color:var(--ink);font-weight:600}
           <text x="78" y="70" font-family="var(--mono)" font-size="12" fill="var(--muted)">the decision leans on an untested causal claim</text>
           <line x1="56" y1="72" x2="56" y2="122" stroke="var(--dag)" stroke-width="1.6" marker-end="url(#arc-d)"/>
           <circle cx="56" cy="146" r="7" fill="var(--loop)"/>
-          <text x="78" y="142" font-family="var(--mono)" font-size="13.5" font-weight="600" fill="var(--ink)">smallest causal test</text>
-          <text x="78" y="160" font-family="var(--mono)" font-size="12" fill="var(--muted)">chosen by what it clarifies vs what it costs to run</text>
-          <line x1="56" y1="162" x2="56" y2="212" stroke="var(--dag)" stroke-width="1.6" marker-end="url(#arc-d)"/>
-          <circle cx="56" cy="236" r="7" fill="var(--dag)"/>
-          <text x="78" y="232" font-family="var(--mono)" font-size="13.5" font-weight="600" fill="var(--ink)">observed outcome</text>
-          <text x="78" y="250" font-family="var(--mono)" font-size="12" fill="var(--muted)">cause established, cheaply — the model re-decides</text>
-          <path d="M42 234 C 14 200, 14 92, 42 58" fill="none" stroke="var(--loop)" stroke-width="1.8" marker-end="url(#arc-o)"/>
-          <text x="280" y="298" text-anchor="middle" font-family="var(--mono)" font-size="12" fill="var(--faint)">the loop repeats until the decision is sharp</text>
-          <text x="280" y="316" text-anchor="middle" font-family="var(--mono)" font-size="12" fill="var(--faint)">enough to commit — or the deadline arrives</text>
+          <text x="78" y="142" font-family="var(--mono)" font-size="13.5" font-weight="600" fill="var(--ink)">cheapest, most informative test</text>
+          <text x="78" y="160" font-family="var(--mono)" font-size="12" fill="var(--muted)">the model looks ahead across candidate experiments —</text>
+          <text x="78" y="176" font-family="var(--mono)" font-size="12" fill="var(--muted)">lowest cost, highest expected information gain</text>
+          <line x1="56" y1="178" x2="56" y2="228" stroke="var(--dag)" stroke-width="1.6" marker-end="url(#arc-d)"/>
+          <circle cx="56" cy="252" r="7" fill="var(--dag)"/>
+          <text x="78" y="248" font-family="var(--mono)" font-size="13.5" font-weight="600" fill="var(--ink)">observed outcome</text>
+          <text x="78" y="266" font-family="var(--mono)" font-size="12" fill="var(--muted)">cause established, cheaply — the model re-decides</text>
+          <path d="M42 250 C 14 212, 14 94, 42 58" fill="none" stroke="var(--loop)" stroke-width="1.8" marker-end="url(#arc-o)"/>
+          <text x="280" y="312" text-anchor="middle" font-family="var(--mono)" font-size="12" fill="var(--faint)">the loop repeats until the decision is sharp</text>
+          <text x="280" y="330" text-anchor="middle" font-family="var(--mono)" font-size="12" fill="var(--faint)">enough to commit — or the deadline arrives</text>
         </svg></figure></div>
   </div>
 </section>
